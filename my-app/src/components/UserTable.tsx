@@ -50,7 +50,7 @@ const UserTable: React.FC = () => {
                             key={user.id}
                             hover
                             style={{ cursor: "pointer" }}
-                            onClick={() => dispatch(selectUser(user))} // ✅ Select user for modal
+                            onClick={() => dispatch(selectUser(user))} 
                         >
                             <TableCell>{user.name}</TableCell>
                             <TableCell>{user.email}</TableCell>
