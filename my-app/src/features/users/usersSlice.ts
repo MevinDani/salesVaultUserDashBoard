@@ -65,7 +65,9 @@ const usersSlice = createSlice({
             })
             .addCase(fetchUsers.fulfilled, (state, action: PayloadAction<User[]>) => {
                 state.loading = false;
-                state.data = action.payload;
+                const existingIds = new Set(state.data.map(u => u.id));
+                const newData = action.payload.filter(u => !existingIds.has(u.id));
+                state.data = [...state.data, ...newData];
             })
             .addCase(fetchUsers.rejected, (state) => {
                 state.loading = false;
