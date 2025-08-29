@@ -70,20 +70,22 @@ const UserTable: React.FC = () => {
 
                             <TableCell>
                                 <TableSortLabel
-                                    active={sortField === "name"}
+                                    // active={sortField === "name"}
+                                    active={true}
                                     direction={sortField === "name" ? sortOrder : "asc"}
                                     onClick={() => handleSort("name")}
-                                    hideSortIcon={false}
+                                // hideSortIcon={false}
                                 >
                                     Name
                                 </TableSortLabel>
                             </TableCell>
                             <TableCell>
                                 <TableSortLabel
-                                    active={sortField === "email"}
+                                    // active={sortField === "email"}
+                                    active={true}
                                     direction={sortField === "email" ? sortOrder : "asc"}
                                     onClick={() => handleSort("email")}
-                                    hideSortIcon={false}
+                                // hideSortIcon={false}
                                 >
                                     Email
                                 </TableSortLabel>
